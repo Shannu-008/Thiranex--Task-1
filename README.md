@@ -1,38 +1,39 @@
-# Data Cleaning and Visualization Project
+# Corporate Data Cleansing & Advanced Analytics Pipeline
 
-A beginner-friendly Python project demonstrating the end-to-end process of cleaning messy corporate data and generating actionable visual insights.
+An industry-grade Python pipeline demonstrating automated data cleaning workflows, statistical imputation, and advanced visualizations for enterprise transaction records.
 
-## 📌 Project Overview
-This project takes a raw, messy dataset containing missing values, duplicates, and data entry errors, refines it using `pandas`, and visualizes the results with `seaborn`.
-
-## 🛠️ Tech Stack & Libraries
-*   **Language:** Python 3.x
-*   **Data Manipulation:** Pandas, NumPy
-*   **Data Visualization:** Matplotlib, Seaborn
+## 📌 Project Architecture
+This project simulates an enterprise database export plagued with common data-entry errors (whitespace padding, unexpected data-type variances, duplicate entries, and financial outliers) and refines it into clean, production-ready assets.
 
 ## 📂 Repository Structure
-*   `cleaning.py` - The main Python script containing data cleaning and visualization logic.
-*   `output/` - Directory where generated data charts and insights are saved.
-*   `README.md` - Documentation and project summary.
+*   `data/` - Storage directory for raw input files and generated clean CSV outputs.
+*   `output/` - Automated storage for structural analytical dashboards and chart metrics.
+*   `cleaning.py` - Core execution file utilizing pandas engines and visualization wrappers.
+*   `requirements.txt` - Complete dependency specification for deployment.
 
-## 🧹 Cleaning Steps Performed
-1.  **Duplicate Removal:** Dropped repeated rows to ensure data integrity.
-2.  **Missing Value Imputation:** Handled missing age records by filling them with the calculated average age.
-3.  **Error Correction:** Fixed mathematical anomalies (such as negative numbers in salary columns).
-4.  **Data Type Conversion:** Cast decimal formatting to standard integers for clear reporting.
+## 🧹 Data Cleaning Pipeline Execution
+The script automatically executes the following data engineering operations:
+1.  **Transactional Deduplication:** Filters records using unique constraints to eliminate double-counting.
+2.  **String Normalization:** Cleans data columns by stripping leading/trailing whitespaces and fixing casing anomalies.
+3.  **Financial Anomaly Handling:** Detects erroneous negative values and programmatically corrects them using category-specific medians.
+4.  **Statistical Group Imputation:** Replaces missing demographic records using regional median cluster metrics rather than a basic global average.
 
-## 📊 Key Insights & Visualizations
-Below is the generated chart showing the relationship between departments and compensation:
+## 📊 Business Intelligence Visualizations
+The automated analytics engine evaluates corporate distributions and demographic targets:
 
-![Average Salary by Department](output/salary_by_department.png)
+### 1. Revenue Distribution Matrix
+![Revenue Distribution](output/category_revenue_distribution.png)
 
-## 🚀 How to Run the Project
-1. Clone this repository or download the files.
-2. Open your terminal and install the required dependencies:
+### 2. Regional Demographic Breakdown
+![Regional Profiles](output/regional_demographics.png)
+
+## 🚀 Deployment Instructions
+1. Clone or download this project workspace.
+2. Install the necessary baseline software layers:
    ```bash
-   pip install pandas numpy matplotlib seaborn
+   pip install -r requirements.txt
    ```
-3. Run the cleaning script:
+3. Execute the full analytics and formatting wrapper:
    ```bash
    python cleaning.py
    ```
